@@ -13,13 +13,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
 @media(max-width:640px){.max{padding:0 1.25rem}}
 
 /* Hero */
-.hero{background:#c84b31;color:#fff;padding:0}
-.hero-top{display:grid;grid-template-columns:1fr 1fr;min-height:70vh}
+.hero{position:relative;background:#c84b31;color:#fff;padding:0;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1553882809-a4f57e595701?w=1200') center/cover no-repeat;filter:brightness(.4);z-index:0}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,75,49,.6),rgba(0,0,0,.5));z-index:1}
+.hero-top{display:grid;grid-template-columns:1fr 1fr;min-height:70vh;position:relative;z-index:2}
 @media(max-width:768px){.hero-top{grid-template-columns:1fr}}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:4rem 3rem}
 .hero-left h2{font-size:clamp(2rem,3.5vw,3.2rem);font-weight:700;line-height:1.1;letter-spacing:-.03em;margin-bottom:1.25rem}
 .hero-left p{font-size:1rem;opacity:.9;margin-bottom:2rem;line-height:1.7;max-width:28rem}
-.hero-right{background:#b83d25;display:flex;align-items:center;justify-content:center;padding:3rem}
+.hero-right{background:rgba(0,0,0,.25);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:3rem}
 .hero-right .phone-circle{width:10rem;height:10rem;border-radius:50%;border:2px solid rgba(255,255,255,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 .hero-right .phone-circle span{font-size:.7rem;opacity:.7;text-transform:uppercase;letter-spacing:.1em}
 .hero-right .phone-circle strong{font-size:1.3rem;font-weight:700;margin:.3rem 0}
