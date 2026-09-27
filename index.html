@@ -2,57 +2,152 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Happy Hound — Mobile Dog Grooming, East Devon</title>
-<meta name="description" content="The Happy Hound: Zoe's mobile dog grooming service covering Ottery St Mary, Honiton, Sidmouth, and Exeter. Full groom £40. Small-medium breeds under 25kg only.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Happy Hound — Mobile Dog Grooming Honiton & Exeter</title>
+<meta name="description" content="Zoe's mobile dog grooming van covers Honiton, Exeter, Ottery St Mary. Small-medium breeds under 25kg. Full groom £40. Van-based, no cages, no stress.">
 <style>
-  html{font-size:100%;-webkit-text-size-adjust:100%}
-  body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;background:#faf6f0;color:#1a1a1a;line-height:1.7}
-  .wrapper{max-width:640px;margin:0 auto;padding:2.5rem 1.25rem}
-  h1{margin:0 0 0.125rem;font-size:2.2rem;font-weight:700;letter-spacing:-0.02em;color:#c84b31;line-height:1.15}
-  .sub{margin:0 0 2.5rem;font-size:1.05rem;color:#6b5b4e}
-  hr{border:none;border-top:2px solid #c84b31;margin:1.75rem 0;width:3rem}
-  h2{margin:1.75rem 0 0.4rem;font-size:1.15rem;font-weight:600;color:#c84b31;text-transform:uppercase;letter-spacing:0.04em}
-  p{margin:0 0 1rem}
-  ul{margin:0 0 1rem;padding:0 0 0 1.25rem}
-  li{margin-bottom:0.3rem}
-  .tel{display:inline-block;margin-top:0.3rem;font-size:1.3rem;font-weight:700;color:#c84b31;text-decoration:none}
-  .tel:hover{text-decoration:underline}
-  small{display:block;margin-top:2.5rem;font-size:0.8rem;color:#999}
-  @media(max-width:480px){.wrapper{padding:1.5rem 1rem}h1{font-size:1.8rem}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:clamp(16px,1.1vw,20px)}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#faf6f0;color:#1c1917;line-height:1.6;-webkit-font-smoothing:antialiased}
+.max{max-width:72rem;margin:0 auto;padding:0 2rem}
+@media(max-width:640px){.max{padding:0 1.25rem}}
+
+/* Hero */
+.hero{background:#c84b31;color:#fff;padding:0}
+.hero-top{display:grid;grid-template-columns:1fr 1fr;min-height:70vh}
+@media(max-width:768px){.hero-top{grid-template-columns:1fr}}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:4rem 3rem}
+.hero-left h2{font-size:clamp(2rem,3.5vw,3.2rem);font-weight:700;line-height:1.1;letter-spacing:-.03em;margin-bottom:1.25rem}
+.hero-left p{font-size:1rem;opacity:.9;margin-bottom:2rem;line-height:1.7;max-width:28rem}
+.hero-right{background:#b83d25;display:flex;align-items:center;justify-content:center;padding:3rem}
+.hero-right .phone-circle{width:10rem;height:10rem;border-radius:50%;border:2px solid rgba(255,255,255,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.hero-right .phone-circle span{font-size:.7rem;opacity:.7;text-transform:uppercase;letter-spacing:.1em}
+.hero-right .phone-circle strong{font-size:1.3rem;font-weight:700;margin:.3rem 0}
+.hero-right .phone-circle a{color:#fff;text-decoration:none}
+
+/* Floating stat bar */
+.stat-bar{background:#1a1a1a;color:#fff;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.stat-bar > div{padding:1.5rem 2rem;text-align:center;border-right:1px solid #333}
+.stat-bar > div:last-child{border:0}
+.stat-bar strong{display:block;font-size:1.3rem;font-weight:700;margin-bottom:.1rem}
+.stat-bar span{font-size:.75rem;color:#a3a3a3;text-transform:uppercase;letter-spacing:.06em}
+
+/* Section */
+.sec{padding:4rem 0}
+.sec-white{background:#fff}
+.hdr{margin-bottom:2.5rem}
+.hdr h3{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.25rem}
+.hdr p{color:#6b7280;font-size:.9rem}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+@media(max-width:640px){.grid-2{grid-template-columns:1fr}}
+
+.info-card{background:#faf6f0;padding:2rem;border-radius:6px;border:1px solid #e5e0d5}
+.info-card h4{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:#c84b31;margin-bottom:.75rem;font-weight:700}
+.info-card p{font-size:.9rem;color:#525252;line-height:1.6}
+
+.area-grid{display:flex;flex-wrap:wrap;gap:.5rem}
+.area-grid span{background:#fff;border:1px solid #e5e0d5;padding:.4rem 1rem;font-size:.85rem;border-radius:4px;color:#525252}
+
+.weight-box{background:#1a1a1a;color:#fff;padding:1.5rem 2rem;border-radius:6px;display:flex;align-items:center;gap:2rem;margin-top:1.5rem}
+.weight-box strong{font-size:2rem;font-weight:700;color:#c84b31;white-space:nowrap}
+.weight-box span{font-size:.9rem;color:#a3a3a3}
+
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:640px){.price-grid{grid-template-columns:1fr}}
+.price-card{text-align:center;padding:2rem;border:1px solid #e5e0d5;border-radius:6px}
+.price-card h4{font-size:1.5rem;font-weight:700;color:#c84b31;margin-bottom:.3rem}
+.price-card p{font-size:.8rem;color:#6b7280}
+.price-card small{display:block;margin-top:.5rem;font-size:.75rem;color:#a3a3a3}
+
+footer{text-align:center;padding:2rem;font-size:.8rem;color:#a3a3a3}
 </style>
 </head>
 <body>
-<div class="wrapper">
 
-<h1>The Happy Hound.</h1>
-<p class="sub">Mobile dog grooming in East Devon.</p>
-
-<hr>
-
-<h2>Who</h2>
-<p>I'm Zoe — I've been grooming dogs from my van for eight years. It's just me, so every groom gets my full attention.</p>
-
-<h2>What</h2>
-<p>Full groom — bath, clip, dry, nails, ears — <strong>£40</strong>. I work with small and medium breeds only, and I'm afraid I can't take dogs over <strong>25kg</strong>.</p>
-
-<h2>Where</h2>
-<p>I cover these villages and towns:</p>
-<ul>
-<li>Ottery St Mary</li>
-<li>Honiton</li>
-<li>Sidmouth</li>
-<li>Exeter</li>
-</ul>
-
-<h2>When</h2>
-<p>Monday to Friday, 9am – 4pm.</p>
-
-<h2>Contact</h2>
-<p>Call or text Zoe on <a class="tel" href="tel:+440****3456">07971 123456</a> — based in Honiton, covering Honiton, Exeter and East Devon.</p>
-
-<small>&copy; 2026 The Happy Hound</small>
-
+<section class="hero">
+<div class="hero-top">
+<div class="hero-left">
+<div style="margin-bottom:1rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;opacity:.7;font-weight:600">Mobile dog grooming · East Devon</div>
+<h2>Zoe brings the groomer to your door.</h2>
+<p>No cages, no waiting rooms, no car journeys. Zoe's fully-equipped van pulls up outside your house and your dog gets a full groom in a familiar, calm environment. Eight years experience, small breeds only.</p>
+<div style="display:flex;gap:1rem">
+<a href="tel:07971123456" style="display:inline-block;background:#fff;color:#c84b31;padding:.6rem 1.5rem;font-size:.9rem;font-weight:600;text-decoration:none;border-radius:4px">Call Zoe</a>
+<span style="display:inline-flex;align-items:center;font-size:.8rem;opacity:.8">📞 07971 123456</span>
 </div>
+</div>
+<div class="hero-right">
+<div class="phone-circle">
+<span>Call or text</span>
+<strong><a href="tel:07971123456">07971 123456</a></strong>
+<span>Zoe replies within hours</span>
+</div>
+</div>
+</div>
+</section>
+
+<div class="stat-bar">
+<div><strong>8</strong><span>Years grooming</span></div>
+<div><strong>£40</strong><span>Full groom</span></div>
+<div><strong>25kg</strong><span>Max dog weight</span></div>
+</div>
+
+<section class="sec sec-white">
+<div class="max">
+<div class="hdr"><h3>What you get</h3><p>A full groom in Zoe's mobile van, parked outside your home. No cages, no other dogs, no stress.</p></div>
+<div class="price-grid">
+<div class="price-card">
+<h4>£40</h4>
+<p>Full groom</p>
+<small>Wash, dry, haircut, nail clip, ear clean · 45-75 mins</small>
+</div>
+<div class="price-card">
+<h4>£25-35</h4>
+<p>Bath & tidy</p>
+<small>Wash, dry, light trim, nail check · 30-40 mins</small>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec">
+<div class="max">
+<div class="hdr"><h3>Coverage area</h3><p>Zoe covers Honiton, Exeter and the surrounding villages. She's based in Honiton and works Mon-Fri 9-4.</p></div>
+<div class="area-grid">
+<span>Honiton</span><span>Exeter</span><span>Ottery St Mary</span><span>Sidmouth</span><span>Feniton</span><span>Gittisham</span><span>Upottery</span><span>Broadhembury</span>
+</div>
+<div class="weight-box">
+<strong>25kg</strong>
+<span>Zoe only grooms small to medium breeds under 25kg. No exceptions — the van is set up for smaller dogs and keeping them calm is the priority. Call if you're unsure.</span>
+</div>
+</div>
+</section>
+
+<section class="sec sec-white">
+<div class="max">
+<div class="hdr"><h3>How it works</h3></div>
+<div class="grid-2">
+<div class="info-card">
+<h4>1. Call or text</h4>
+<p>Get in touch with Zoe. Tell her your dog's breed and weight — she'll confirm if she can take them and suggest a date.</p>
+</div>
+<div class="info-card">
+<h4>2. She arrives</h4>
+<p>Zoe texts you a morning-of arrival window. Her van pulls up outside your house — you don't go anywhere.</p>
+</div>
+<div class="info-card">
+<h4>3. Grooming</h4>
+<p>Your dog goes into the van with Zoe. She works calmly, one dog at a time, no rush. You can wait inside or go about your day.</p>
+</div>
+<div class="info-card">
+<h4>4. Done</h4>
+<p>Zoe returns your dog clean, dry, and clipped. You pay cash or bank transfer. That's it — no booking system, no fuss.</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>The Happy Hound · Mobile dog grooming · Honiton & Exeter</footer>
+
 </body>
 </html>
